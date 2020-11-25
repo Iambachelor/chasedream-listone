@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 引入属性文件配置 -->
+	<properties resource="config/db.properties">
+		<property name="" value="" />
+	</properties>
+
+	<!-- 配置setting -->
+	<settings>
+		<setting name="" value="" />
+		<setting name="" value="" />
+		<setting name="" value="" />
+		<setting name="" value="" />
+	</settings>
+
+	<!-- 配置typeAliases -->
+	<typeAliases>
+		<typeAlias type="" />
+		<package name="" />
+	</typeAliases>
+
+	<!-- 配置typeHandlers -->
+	<typeHandlers>
+		<typeHandler handler="" />
+		<package name="" />
+	</typeHandlers>
+
+
+
+	<!-- 配置objectFactory -->
+	<objectFactory type="">
+		<property name="" value="" />
+	</objectFactory>
+
+	<!-- 配置objectWrapperFactory -->
+	<objectWrapperFactory type="" />
+
+
+	<!-- 配置reflectorFactory -->
+	<reflectorFactory type="" />
+
+
+	<!-- 配置plugins -->
+	<plugins>
+		<plugin interceptor="">
+			<property name="" value="" />
+		</plugin>
+	</plugins>
+
+	<!-- 配置environments -->
+	<environments default="default">
+		<environment id="default">
+			<transactionManager type="JDBC">
+				<property name="" value="" />
+			</transactionManager>
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.user}" />
+				<property name="password" value="${jdbc.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<!-- 配置databaseIdProvider -->
+	<databaseIdProvider type="">
+
+	</databaseIdProvider>
+
+	<mappers>
+		<mapper resource="cn/dreamchase/statement/mapper.xml" />
+	</mappers>
+</configuration>
