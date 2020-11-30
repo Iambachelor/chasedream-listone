@@ -5,50 +5,42 @@
 <configuration>
 	<!-- 引入属性文件配置 -->
 	<properties resource="config/db.properties">
-		<property name="" value="" />
+		<!-- property元素：设置属性值。name：属性名称；value：属性值 。property元素可以有多个 -->
+		<property name="jdbc.driver" value="com.mysql.jdbc.Driver" />
 	</properties>
 
 	<!-- 配置setting -->
 	<settings>
-		<setting name="" value="" />
-		<setting name="" value="" />
-		<setting name="" value="" />
-		<setting name="" value="" />
+		<!-- setting元素：修改默认setting -->
+		<setting name="useColumnLabel" value="true" />
 	</settings>
 
 	<!-- 配置typeAliases -->
 	<typeAliases>
-		<typeAlias type="" />
-		<package name="" />
+		<!-- typeAlias元素：为某个类指定别名 -->
+		<typeAlias
+			type="cn.dreamchase.dreamchaselistone.pojos.Person" alias="person" />
+		<!-- package元素：指定某个包下的所有类的别名 -->
+		<package name="cn.dreamchase.dreamchaselistone.pojos" />
 	</typeAliases>
 
 	<!-- 配置typeHandlers -->
-	<typeHandlers>
-		<typeHandler handler="" />
-		<package name="" />
-	</typeHandlers>
-
-
+	<!-- <typeHandlers> <typeHandler handler="IntegerTypeHandler" javaType="java.lang.Integer" 
+		jdbcType="Integer"/> <package name="java.lang.Integer" /> </typeHandlers> -->
 
 	<!-- 配置objectFactory -->
-	<objectFactory type="">
-		<property name="" value="" />
-	</objectFactory>
-
+	<!-- <objectFactory type=""> <property name="" value="" /> </objectFactory> -->
 	<!-- 配置objectWrapperFactory -->
-	<objectWrapperFactory type="" />
+	<!-- <objectWrapperFactory type="" /> -->
 
 
 	<!-- 配置reflectorFactory -->
-	<reflectorFactory type="" />
+	<!-- <reflectorFactory type="" /> -->
 
 
 	<!-- 配置plugins -->
-	<plugins>
-		<plugin interceptor="">
-			<property name="" value="" />
-		</plugin>
-	</plugins>
+	<!-- <plugins> <plugin interceptor=""> <property name="" value="" /> </plugin> 
+		</plugins> -->
 
 	<!-- 配置environments -->
 	<environments default="default">
@@ -66,9 +58,7 @@
 	</environments>
 
 	<!-- 配置databaseIdProvider -->
-	<databaseIdProvider type="">
-
-	</databaseIdProvider>
+	<!-- <databaseIdProvider type=""> </databaseIdProvider> -->
 
 	<mappers>
 		<mapper resource="cn/dreamchase/statement/mapper.xml" />
